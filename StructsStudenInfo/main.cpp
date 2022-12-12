@@ -17,7 +17,7 @@ using namespace std;
 struct StudentInfo {
 	int mId;
 	int mEntryYear;
-	double mGpa;
+	double mGPA;
 };
 
 int readStudentInfo (StudentInfo sStudents[]);
@@ -48,7 +48,7 @@ int main () {
 	// sample function call with gpa = 3.2
 
 	cout << "Number of students with GPA of " << GPA_TO_FIND << " is: "
-		   << getGPAData(sStudents, numStudents, GPA_TO_FIND);
+		   << getGPAData (sStudents, numStudents, GPA_TO_FIND);
 
 	return EXIT_SUCCESS;
 }
@@ -82,7 +82,7 @@ int readStudentInfo (StudentInfo sStudents[]) {
 	while (tempId != -9999) {
 		sStudents[numStudents].mId = tempId;
 		sStudents[numStudents].mEntryYear = tempEntryYear;
-		sStudents[numStudents].mGpa = tempGPA; 
+		sStudents[numStudents].mGPA = tempGPA; 
 
 		numStudents++;  
 		inputFile >> tempId >> tempEntryYear >> tempGPA;
@@ -107,7 +107,7 @@ int getGPAData(const StudentInfo sStudents[], int const numStudents,
 	int countGPA = 0;
 
 	for (int index = 0; index < numStudents; ++index) {
-		if (gpa == sStudents[index].mGpa) {
+		if (gpa == sStudents[index].mGPA) {
 			++countGPA;
 		}
 	}
