@@ -36,15 +36,16 @@ Returned:			number of students in the array
 ***********************************************************************/
 
 int main () {
-	const double GPA_TO_FIND = 3.20;
+	const double GPA_TO_FIND = 3.2;
 	const int MAX_SIZE = 1000;
+
 	int numStudents; 
-	int numGPA; 
+ 
 	StudentInfo sStudents[MAX_SIZE];
 
 	numStudents = readStudentInfo(sStudents);
 
-	// sample function call with gpa = 3.20
+	// sample function call with gpa = 3.2
 
 	cout << "Number of students with GPA of " << GPA_TO_FIND << " is: "
 		   << getGPAData(sStudents, numStudents, GPA_TO_FIND);
